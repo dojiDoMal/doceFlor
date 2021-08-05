@@ -5,7 +5,14 @@
       flat
       color="transparent"
     >
-      <v-toolbar-title> <v-icon color="#1d2327">mdi-flower-outline</v-icon> Doce Flor</v-toolbar-title>
+      <v-toolbar-title> 
+        <v-icon color="#1d2327">
+          mdi-flower-outline
+        </v-icon> 
+        <span style="text-shadow:0 0 black;">
+          Doce Flor
+        </span>
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
       <v-toolbar-items>
@@ -31,6 +38,19 @@
 </script>
 
 <style scoped>
+
+  @font-face {
+  font-family: "Mr-Mogollon";
+  /*src: url(../assets/fonts/Mr-Mogollon.ttf.eot);
+  src: url(../assets/fonts/Mr-Mogollon.ttf.woff) format("woff");*/
+  src: url(../assets/fonts/Mr-Mogollon.ttf);
+  /*src: url(../assets/fonts/Mr-Mogollon.ttf.svg) format("svg");*/
+}
+
+  .v-toolbar__title{
+    font-family: "Mr-Mogollon";
+  }
+
   .mdi-instagram {
     background: radial-gradient(
     circle at 30% 107%,
