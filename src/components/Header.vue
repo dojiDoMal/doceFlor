@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <v-toolbar
-      dense
       flat
       color="transparent"
     >
-      <v-toolbar-title> 
+      <v-toolbar-title>
+        <!-- TODO: Trocar esse ícone pelo da doce flor --> 
         <v-icon color="#1d2327">
           mdi-flower-outline
         </v-icon> 
@@ -15,12 +15,13 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
+      <!-- TODO: Colocar os links correspondentes -->
       <v-toolbar-items>
         <v-btn icon>
-          <v-icon>mdi-instagram</v-icon>
+          <v-icon style="font-size:2rem; height:40px; width:40px">mdi-instagram</v-icon>
         </v-btn>
         <v-btn icon>
-          <v-icon>mdi-whatsapp</v-icon>
+          <v-icon style="font-size:2rem; height:40px; width:40px">mdi-whatsapp</v-icon>
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
