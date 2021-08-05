@@ -1,6 +1,22 @@
 <template>
   <v-container>
-    Header
+    <v-toolbar
+      dense
+      flat
+      color="transparent"
+    >
+      <v-toolbar-title> <v-icon color="#1d2327">mdi-flower-outline</v-icon> Doce Flor</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn icon>
+          <v-icon>mdi-instagram</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-whatsapp</v-icon>
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
   </v-container>
 </template>
 
@@ -13,3 +29,31 @@
     }),
   }
 </script>
+
+<style scoped>
+  .mdi-instagram {
+    background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .mdi-whatsapp {
+    background: rgb(0, 182, 91);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    /*-webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;*/
+}
+
+
+
+</style>

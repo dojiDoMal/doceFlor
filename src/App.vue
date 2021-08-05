@@ -2,8 +2,9 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
-      dark
+      dense
+      flat
+      src="https://res.cloudinary.com/dmuoxjozq/image/upload/v1628178318/template_fw6j4b.png"
     >
       <Header/>
     </v-app-bar>

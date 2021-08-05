@@ -1,4 +1,5 @@
-# gallery
+# Single Page Application para Doce Flor
+Página dedicada a exibir a coleção de fotos dos produtos da loja virtual de T-shirts [Doce Flor](https://www.instagram.com/doceflor_tshirt_/).
 
 ## Project setup
 ```
