@@ -17,15 +17,16 @@
 
 // block
 .block {
-  padding: 60px 0;
-  border-bottom: 1px solid darken($white, 10%);
+  padding: 20px 0;
+  border-bottom: 1px solid darken($white, 30%);
 
   @media only screen and (max-width: 599px) {
     padding: 20px 0;
   }
 
   h2 {
-    font-size: 30px;
+    font-family: "Paper-Flowers";
+    font-size: 40px;
     padding: 0 0 10px;
     margin: 0 0 40px;
     position: relative;
@@ -39,7 +40,7 @@
     &:after {
       content: '';
       background: $black;
-      width: 60px;
+      width: 120px;
       height: 1px;
       position: absolute;
       bottom: 0;

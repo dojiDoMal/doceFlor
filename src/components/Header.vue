@@ -40,12 +40,13 @@
 
 <style scoped>
 
+  /*
+  * TODO:
+  * Colocar os arquivos de fonte também hospedados no servidor (?)
+  */
   @font-face {
   font-family: "Mr-Mogollon";
-  /*src: url(../assets/fonts/Mr-Mogollon.ttf.eot);
-  src: url(../assets/fonts/Mr-Mogollon.ttf.woff) format("woff");*/
   src: url(../assets/fonts/Mr-Mogollon.ttf);
-  /*src: url(../assets/fonts/Mr-Mogollon.ttf.svg) format("svg");*/
 }
 
   .v-toolbar__title{

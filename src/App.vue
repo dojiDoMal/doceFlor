@@ -1,15 +1,17 @@
 <template>
   <v-app>
+    <!-- TODO: colocar essa imagem da navbar via cdn (?) -->
     <v-app-bar
       app
       flat
-      src="https://res.cloudinary.com/dmuoxjozq/image/upload/v1628178318/template_fw6j4b.png"
+      src="./assets/images/navbarbg.png"
     >
       <Header/>
     </v-app-bar>
 
     <v-main>
       <Hero/>
+      <Gallery/>
     </v-main>
   </v-app>
 </template>
@@ -17,6 +19,7 @@
 <script>
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Gallery from './components/Gallery'
 
 export default {
   name: 'App',
@@ -24,6 +27,7 @@ export default {
   components: {
     Header,
     Hero,
+    Gallery,
   },
 
   data: () => ({

@@ -63,7 +63,11 @@
 </script>
 
 <style scoped>
-
+  
+  /*
+  * TODO:
+  * Colocar os arquivos de fonte também hospedados no servidor (?)
+  */
   @font-face{
     font-family: "Paper-Flowers";
     src: url(../assets/fonts/Paper-Flowers.otf);
