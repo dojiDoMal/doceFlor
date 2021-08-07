@@ -37,3 +37,19 @@
     background: rgba(0,0,0,0.3);
   }
 }
+
+// card block
+.cardBlock{
+  &:hover{
+    opacity: 90%;
+    filter: drop-shadow(0px 1px 2px black);
+  }
+  .v-card__title {
+    line-height: 1rem;
+    font-size: 2rem;
+    font-family: "Mr-Mogollon";
+    color: rgba(0,0,0,.8);
+    font-weight: 600;
+    letter-spacing: .1rem;
+  }
+}

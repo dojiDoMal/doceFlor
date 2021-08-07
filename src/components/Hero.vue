@@ -6,7 +6,7 @@
       height="400"
       next-icon="mdi-menu-right"
       prev-icon="mdi-menu-left"
-      show-arrows-on-hover=true
+      :show-arrows-on-hover=true
     >
       <v-carousel-item
         v-for="(item,i) in items"
