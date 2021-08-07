@@ -8,6 +8,7 @@
           :key="item.id"
           :cols="item.flex"
         >
+          <!-- TODO: quando clicar na imagem (card) expandir, tipo instagram -->
           <v-card class="cardBlock">
             <v-img
               :src="item.src"

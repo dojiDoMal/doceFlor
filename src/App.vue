@@ -5,6 +5,7 @@
       app
       flat
       src="./assets/images/navbarbg.png"
+      :hide-on-scroll=true
     >
       <Header/>
     </v-app-bar>
@@ -13,6 +14,10 @@
       <Hero/>
       <Gallery/>
     </v-main>
+    <div class="block">
+      <h2></h2>
+    </div>
+      <Footer />
   </v-app>
 </template>
 
@@ -20,6 +25,7 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Gallery from './components/Gallery'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
@@ -28,6 +34,7 @@ export default {
     Header,
     Hero,
     Gallery,
+    Footer,
   },
 
   data: () => ({
