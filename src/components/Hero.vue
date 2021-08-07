@@ -18,7 +18,7 @@
             align="center"
             justify="center"
           >
-            <div class='image-title'>
+            <div class='image-title hidden-xs-only'>
               {{ item.title }}
             </div>
           </v-row>

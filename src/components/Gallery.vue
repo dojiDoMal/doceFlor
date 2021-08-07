@@ -6,7 +6,9 @@
         <v-col
           v-for="item in items"
           :key="item.id"
-          :cols="item.flex"
+          xs="12"
+          sm="6"
+          md="3"
         >
           <!-- TODO: quando clicar na imagem (card) expandir, tipo instagram -->
           <v-card class="cardBlock">
@@ -49,37 +51,31 @@
             id: 1,
             src: require("../assets/images/img1.jpg"),
             title: "Lorem Ipsum",
-            flex: 3,
           },
           {
             id: 2,
             src: require("../assets/images/img2.jpg"),
             title: "Lorem Ipsum",
-            flex: 3,
           },
           {
             id: 3,
             src: require("../assets/images/img3.jpg"),
             title: "Lorem Ipsum",
-            flex: 3,
           },
           {
             id: 4,
             src: require("../assets/images/img4.jpg"),
             title: "Lorem Ipsum",
-            flex: 3,
           },
           {
             id: 5,
             src: require("../assets/images/img5.jpg"),
             title: "Lorem Ipsum",
-            flex: 3,
           },
           {
             id: 6,
             src: require("../assets/images/img6.jpg"),
             title: "Lorem Ipsum",
-            flex: 3,
           },
         ]
       }

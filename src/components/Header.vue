@@ -4,6 +4,7 @@
       flat
       color="transparent"
     >
+      <v-spacer class="d-flex d-sm-none"></v-spacer>
       <v-toolbar-title>
         <!-- TODO: Trocar esse ícone pelo da doce flor --> 
         <v-icon color="#1d2327">
@@ -13,14 +14,15 @@
           Doce Flor
         </span>
       </v-toolbar-title>
+      <v-spacer class="d-flex d-sm-none"></v-spacer>
 
-      <v-spacer></v-spacer>
+      <v-spacer class="hidden-xs-only"></v-spacer>
       <!-- TODO: Colocar os links correspondentes -->
       <v-toolbar-items>
-        <v-btn icon>
+        <v-btn class="hidden-xs-only" icon>
           <v-icon style="font-size:2rem; height:40px; width:40px">mdi-instagram</v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn class='hidden-xs-only' icon>
           <v-icon style="font-size:2rem; height:40px; width:40px">mdi-whatsapp</v-icon>
         </v-btn>
       </v-toolbar-items>
@@ -45,37 +47,12 @@
   * Colocar os arquivos de fonte também hospedados no servidor (?)
   */
   @font-face {
-  font-family: "Mr-Mogollon";
-  src: url(../assets/fonts/Mr-Mogollon.ttf);
-}
+    font-family: "Mr-Mogollon";
+    src: url(../assets/fonts/Mr-Mogollon.ttf);
+  }
 
   .v-toolbar__title{
     font-family: "Mr-Mogollon";
   }
-
-  .mdi-instagram {
-    background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .mdi-whatsapp {
-    background: rgb(0, 182, 91);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
-    /*-webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: white;*/
-}
-
-
 
 </style>

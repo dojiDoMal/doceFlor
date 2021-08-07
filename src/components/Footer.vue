@@ -11,10 +11,11 @@
       tile
     >
       <v-card-title class="teal lighten-3">
-        <strong style="color:black" class="subheading">Nos siga no Instagram!</strong>
+        <strong style="color:black" class="subheading hidden-xs-only">Nos siga no Instagram!</strong>
 
-        <v-spacer></v-spacer>
+        <v-spacer class="hidden-xs-only"></v-spacer>
 
+        <v-spacer class="d-flex d-sm-none"></v-spacer>
         <v-btn
           color="black"
           v-for="icon in icons"
@@ -23,10 +24,11 @@
           icon
         >
           <!-- TODO: Colocar links nos botões instagram e whatsapp -->
-          <v-icon size="24px">
+          <v-icon class="footer" size="24px">
             {{ icon }}
           </v-icon>
         </v-btn>
+        <v-spacer class="d-flex d-sm-none"></v-spacer>
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
