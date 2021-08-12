@@ -1,11 +1,10 @@
 <template>
   <v-app>
-    <!-- TODO: transformar botões whatsapp e instagram em components? -->
-    <!-- TODO: colocar essa imagem da navbar via cdn (?) -->
+    <!-- TODO: ver possibilidade de criar um componente pra essa app-bar  -->
     <v-app-bar
       app
       flat
-      src="./assets/images/navbarbg.png"
+      :src="'data:image/png;base64,'+event.navbarImage"
       :hide-on-scroll=true
     >
       <Header/>
@@ -13,14 +12,17 @@
 
     <v-main>
       <Hero/>
-      <!--TODO: Colocar links instagram e whatsapp -->
       <div class="text-center">
-        <v-btn class="d-sm-none contactButton" style="margin-right:10px;" icon>
-          <v-icon >mdi-instagram</v-icon>
-        </v-btn>
-        <v-btn class="d-sm-none contactButton" style="margin-left:10px;" icon>
-            <v-icon>mdi-whatsapp</v-icon>
-        </v-btn>
+        <Social
+          :social-link="event.instagramLink"
+          class="mr-10 d-sm-none contactButton"
+          social-icon="instagram"
+        />
+        <Social
+          :social-link="event.whatsappLink"
+          class="ml-10 d-sm-none contactButton"
+          social-icon="whatsapp"
+        />
       </div>
       <Gallery/>
     </v-main>
@@ -36,20 +38,25 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
+import Social from './components/Social'
 
 export default {
   name: 'App',
-
   components: {
     Header,
     Hero,
     Gallery,
     Footer,
+    Social,
   },
-
   data: () => ({
-    //
+    event: {},
   }),
+  created(){
+    this.$http.get("http://localhost:8000/")
+      .then(res => res.json())
+      .then(event => this.event = event, err => console.log(err))
+  },
 };
 </script>
 

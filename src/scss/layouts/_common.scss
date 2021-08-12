@@ -15,6 +15,13 @@
     }
   }
 
+  .mr-10{
+    margin-right: $btn-margin-10 !important;
+  }
+  .ml-10{
+    margin-left: $btn-margin-10 !important;
+  }
+
   .mdi-instagram:not(.footer) {
     background: radial-gradient(
       circle at 30% 107%,

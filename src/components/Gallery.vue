@@ -12,8 +12,8 @@
         >
           <!-- TODO: quando clicar na imagem (card) expandir, tipo instagram -->
           <v-card class="cardBlock">
-            <v-img
-              :src="item.src"
+            <v-img 
+              :src="'data:image/png;base64,'+item.src"
               class="white--text align-end"
               height="250px"
             >
@@ -39,50 +39,18 @@
         })   
       }
     },
-    mounted: function(){
+    updated: function(){
       this.randomColor()
     },
-    // TODO: 
-    // Essas imagens preciasm ser obtidas do servidor e não localmente
     data(){
       return{
-        items: [
-          {
-            id: 1,
-            src: require("../assets/images/img1.jpg"),
-            title: "Lorem Ipsum",
-          },
-          {
-            id: 2,
-            src: require("../assets/images/img2.jpg"),
-            title: "Lorem Ipsum",
-          },
-          {
-            id: 3,
-            src: require("../assets/images/img3.jpg"),
-            title: "Lorem Ipsum",
-          },
-          {
-            id: 4,
-            src: require("../assets/images/img4.jpg"),
-            title: "Lorem Ipsum",
-          },
-          {
-            id: 5,
-            src: require("../assets/images/img5.jpg"),
-            title: "Lorem Ipsum",
-          },
-          {
-            id: 6,
-            src: require("../assets/images/img6.jpg"),
-            title: "Lorem Ipsum",
-          },
-        ]
+        items: [],
       }
-    }
+    },
+    created(){
+      this.$http.get("http://localhost:8000/")
+        .then(res => res.json())
+        .then(event => this.items = event.img, err => console.log(err))
+    },
   }
 </script>
-
-<style scoped>
-
-</style>
