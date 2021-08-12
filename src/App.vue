@@ -53,7 +53,7 @@ export default {
     event: {},
   }),
   created(){
-    this.$http.get("http://localhost:8000/")
+    this.$http.get(process.env.VUE_APP_SERVER_BASE_URL)
       .then(res => res.json())
       .then(event => this.event = event, err => console.log(err))
   },
