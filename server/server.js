@@ -46,6 +46,8 @@ let events = {
     whatsappLink: "https://api.whatsapp.com/message/LS2IND44IXOLG1",
 }
 
+// TODO: ver possibilidade de refatorar criando outras rotas 
+// de requisição para dividir os dados entre arquivos .js
 app.get('/', (req, res) => {
   res.send(events)
 });

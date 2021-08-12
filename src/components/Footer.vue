@@ -16,18 +16,18 @@
         <v-spacer class="hidden-xs-only"></v-spacer>
 
         <v-spacer class="d-flex d-sm-none"></v-spacer>
-        <v-btn
-          color="black"
-          v-for="icon in icons"
-          :key="icon"
+
+        <Social
+          :social-link="event.instagramLink"
           class="mx-4"
-          icon
-        >
-          <!-- TODO: Colocar links nos botões instagram e whatsapp -->
-          <v-icon class="footer" size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
+          social-icon="instagram"
+        />
+        <Social
+          :social-link="event.whatsappLink"
+          class="mx-4"
+          social-icon="whatsapp"
+        />
+
         <v-spacer class="d-flex d-sm-none"></v-spacer>
       </v-card-title>
 
@@ -41,13 +41,19 @@
 </template>
 
 <script>
+  import Social from './Social'
   export default {
     name: 'Footer',
+    components: {
+      Social,
+    },
     data: () => ({
-      icons: [
-        'mdi-instagram',
-        'mdi-whatsapp',
-      ],
+      event: {}
     }),
+    created(){
+    this.$http.get("http://localhost:8000/")
+      .then(res => res.json())
+      .then(event => this.event = event, err => console.log(err))
+    },
   }
 </script>
