@@ -10,16 +10,15 @@
           sm="6"
           md="3"
         >
-          <!-- TODO: quando clicar na imagem (card) expandir, tipo instagram -->
-          <v-card class="cardBlock">
-            <v-img 
+          <v-card class="cardBlock" id="doceflor">
+
+            <Expandable
               :src="'data:image/png;base64,'+item.src"
               class="white--text align-end"
-              height="250px"
-            >
-              <v-card-title id="galleryCardTitle" v-text="item.title">
-              </v-card-title>
-            </v-img>
+            />
+            <v-card-title id="galleryCardTitle" v-text="item.title">
+            </v-card-title>
+            
           </v-card>
         </v-col>
       </v-row>
@@ -28,7 +27,11 @@
 </template>
 
 <script>
+  import Expandable from './Expandable'
   export default {
+    components: {
+      Expandable
+    },
     name: 'Gallery',
     methods: {
       randomColor(){
@@ -54,3 +57,6 @@
     },
   }
 </script>
+
+<style>
+</style>
