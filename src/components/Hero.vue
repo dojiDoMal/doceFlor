@@ -11,7 +11,7 @@
       <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
-        :src="item.src"
+        :src="'data:image/png;base64,'+item.src"
       >
         <v-row
             class="fill-height"
@@ -19,7 +19,7 @@
             justify="center"
           >
             <div class='image-title hidden-xs-only'>
-              {{ item.title }}
+              {{ item.text }}
             </div>
           </v-row>
       </v-carousel-item>
@@ -30,34 +30,15 @@
 <script>
   export default {
     name: 'Hero',
-    data () {
-      return {
-        // TODO:
-        // Deixar essas imagens em um banco de dados ou no cloudinary,
-        // pra facilitar alterações depois
-        items: [
-          {
-            src: require("../assets/images/doce1.jpg"),
-            title: "Mulher Nordestina",
-          },
-          {
-            src: require("../assets/images/doce2.jpg"),
-            title: "Arranjo Floral",
-          },
-          {
-            src: require("../assets/images/doce3.jpg"),
-            title: "Deixe o Amor Crescer",
-          },
-          {
-            src: require("../assets/images/doce4.jpg"),
-            title: "O Sol e o Mar",
-          },
-          {
-            src: require("../assets/images/doce5.jpg"),
-            title: "Coleção Floresça",
-          },
-        ],
+    data(){
+      return{
+        items: [],
       }
+    },
+    created(){
+      this.$http.get(process.env.VUE_APP_SERVER_BASE_URL + "carousel")
+        .then(res => res.json())
+        .then(event => this.items = event.img, err => console.log(err))
     },
   }
 </script>

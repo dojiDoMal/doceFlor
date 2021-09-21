@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <!-- TODO: colocar tamanhos disponíveis e valor das camisas e marcar as esgotadas -->
     <div class="block galleryBlock">
       <h2 class="text-center">Nossas T-shirts</h2>
       <v-row dense>
@@ -51,7 +52,7 @@
       }
     },
     created(){
-      this.$http.get("http://localhost:8000/")
+      this.$http.get(process.env.VUE_APP_SERVER_BASE_URL + "gallery")
         .then(res => res.json())
         .then(event => this.items = event.img, err => console.log(err))
     },
